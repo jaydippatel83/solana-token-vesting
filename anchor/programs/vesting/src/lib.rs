@@ -3,10 +3,10 @@
 use anchor_lang::prelude::*;
 use anchor_spl::{
     associated_token::AssociatedToken,
-    token_interface::{self,Mint, TokenAccount, TokenInterface, TransferChecked},
+    token_interface::{Mint, TokenAccount, TokenInterface, TransferChecked, transfer_checked},
 };
 
-declare_id!("Count3AcZucFDPSFBAeHkQ6AvttieKUkyJ8HiQGhQwe");
+declare_id!("CUt6Fw4yrNMXhhj7awBNZZZZnf2ww1j8Utvu4M4ULsPE");
 
 #[program]
 pub mod vesting {  
@@ -65,10 +65,8 @@ pub mod vesting {
             employee_account.token_amount
         } else {
           match employee_account.token_amount.checked_mul(time_since_start as u64) {
-            Some(product)=>(
-                product / total_vesting_time as u64 
-            ),
-            None=>{
+            Some(product) => product / total_vesting_time as u64,
+            None => {
                 return Err(ErrorCode::CalculationOverflow.into());
             } 
           }
@@ -86,15 +84,18 @@ pub mod vesting {
         };
 
         let cpi_program = ctx.accounts.token_program.to_account_info();
+        let company_name_bytes = ctx.accounts.vesting_account.company_name.as_bytes();
         let signer_seeds: &[&[&[u8]]] = &[
-            &[b"employee_vesting", 
-            ctx.accounts.vesting_account.company_name.as_ref(),
-            &[&ctx.accounts.vesting_account.treasury_bump]],
+            &[
+                b"vesting_treasury",
+                company_name_bytes,
+                &[ctx.accounts.vesting_account.treasury_bump]
+            ],
         ];
 
         let cpi_context = CpiContext::new(cpi_program, transfer_cpi_accounts).with_signer(signer_seeds);
-        let decimal= ctx.accounts.mint.decimals;
-        transfer_checked(cpi_context, claimable_amount as u64, decimal)?;
+        let decimal = ctx.accounts.mint.decimals;
+        transfer_checked(cpi_context, claimable_amount, decimal)?;
 
         employee_account.total_withdrawal += claimable_amount;
         Ok(())
@@ -205,7 +206,7 @@ pub struct VestingAccount {
 }
 
 #[account]
-#[derive(Accounts)]
+#[derive(InitSpace)]
 pub struct EmployeeAccount{
     pub beneficiary: Pubkey,
     pub start_time: i64,
