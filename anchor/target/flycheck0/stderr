@@ -1,5 +1,5 @@
-   0.090076000s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint: fingerprint error for vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting)/Check { test: false }/TargetInner { ..: lib_target("vesting", ["cdylib", "lib"], "/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting/src/lib.rs", Edition2021) }
-   0.090099791s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/vesting-243047c2c73070c4/lib-vesting`
+   0.325215166s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint: fingerprint error for vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting)/Check { test: false }/TargetInner { ..: lib_target("vesting", ["cdylib", "lib"], "/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting/src/lib.rs", Edition2021) }
+   0.325502000s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/vesting-243047c2c73070c4/lib-vesting`
 
 Caused by:
     No such file or directory (os error 2)
@@ -22,8 +22,8 @@ Stack backtrace:
   14: std::rt::lang_start::<()>::{closure#0}
   15: std::rt::lang_start_internal
   16: _main
-   0.097455708s  INFO prepare_target{force=false package_id=anchor-spl v0.32.1 target="anchor_spl"}: cargo::core::compiler::fingerprint: fingerprint error for anchor-spl v0.32.1/Check { test: false }/TargetInner { ..: lib_target("anchor_spl", ["lib"], "/Users/apple/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-spl-0.32.1/src/lib.rs", Edition2021) }
-   0.097460708s  INFO prepare_target{force=false package_id=anchor-spl v0.32.1 target="anchor_spl"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/anchor-spl-a24f944c4b39ce56/lib-anchor_spl`
+   0.372365500s  INFO prepare_target{force=false package_id=anchor-spl v0.32.1 target="anchor_spl"}: cargo::core::compiler::fingerprint: fingerprint error for anchor-spl v0.32.1/Check { test: false }/TargetInner { ..: lib_target("anchor_spl", ["lib"], "/Users/apple/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-spl-0.32.1/src/lib.rs", Edition2021) }
+   0.372378083s  INFO prepare_target{force=false package_id=anchor-spl v0.32.1 target="anchor_spl"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/anchor-spl-a24f944c4b39ce56/lib-anchor_spl`
 
 Caused by:
     No such file or directory (os error 2)
@@ -47,8 +47,8 @@ Stack backtrace:
   15: std::rt::lang_start::<()>::{closure#0}
   16: std::rt::lang_start_internal
   17: _main
-   0.097811833s  INFO prepare_target{force=false package_id=anchor-lang v0.32.1 target="anchor_lang"}: cargo::core::compiler::fingerprint: fingerprint error for anchor-lang v0.32.1/Check { test: false }/TargetInner { ..: lib_target("anchor_lang", ["lib"], "/Users/apple/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-0.32.1/src/lib.rs", Edition2021) }
-   0.097815458s  INFO prepare_target{force=false package_id=anchor-lang v0.32.1 target="anchor_lang"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/anchor-lang-37016e7165492c06/lib-anchor_lang`
+   0.373019041s  INFO prepare_target{force=false package_id=anchor-lang v0.32.1 target="anchor_lang"}: cargo::core::compiler::fingerprint: fingerprint error for anchor-lang v0.32.1/Check { test: false }/TargetInner { ..: lib_target("anchor_lang", ["lib"], "/Users/apple/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-0.32.1/src/lib.rs", Edition2021) }
+   0.373027208s  INFO prepare_target{force=false package_id=anchor-lang v0.32.1 target="anchor_lang"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/anchor-lang-37016e7165492c06/lib-anchor_lang`
 
 Caused by:
     No such file or directory (os error 2)
@@ -73,8 +73,8 @@ Stack backtrace:
   16: std::rt::lang_start::<()>::{closure#0}
   17: std::rt::lang_start_internal
   18: _main
-   0.101328291s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint: fingerprint error for vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting)/Check { test: true }/TargetInner { ..: lib_target("vesting", ["cdylib", "lib"], "/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting/src/lib.rs", Edition2021) }
-   0.101334125s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/vesting-7e272ad8f4e0f825/test-lib-vesting`
+   0.386501916s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint: fingerprint error for vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting)/Check { test: true }/TargetInner { ..: lib_target("vesting", ["cdylib", "lib"], "/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting/src/lib.rs", Edition2021) }
+   0.386513916s  INFO prepare_target{force=false package_id=vesting v0.1.0 (/Users/apple/Desktop/solana-token-vesting/anchor/programs/vesting) target="vesting"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/apple/Desktop/solana-token-vesting/anchor/target/debug/.fingerprint/vesting-7e272ad8f4e0f825/test-lib-vesting`
 
 Caused by:
     No such file or directory (os error 2)
